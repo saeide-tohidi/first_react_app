@@ -1,7 +1,9 @@
 import { Component } from "react";
-import "./Myapp.css";
+// import "./Myapp.css";
 import CounterSecound from "./components/CounterSecound"
 import { useState } from "react";
+import styles from './Myapp.module.css'
+
 
 const Myapp = () => {
     // console.log(props.count)
@@ -27,7 +29,7 @@ const Myapp = () => {
 
     const myStyle = { color: 'red', border: 'blue' }
     return (
-        <div className="Myapp">
+        <div className={styles.Myapp} >
             <h1 style={myStyle}>My counter</h1>
 
             <CounterSecound inc={increaseCount} dec={decreaseCount} rest={resetCount} count={count} />
